@@ -69,6 +69,7 @@
             <div class="form-group row">
                 <div class="offset-4 col-8">
                 <button name="submit" type="submit" class="btn btn-primary">Simpan</button>
+                <a href="data_user.php" type="reset" class="btn btn-warning">Batal</a>
                 </div>
             </div>
             </form>
@@ -77,11 +78,14 @@
 </div>
 
 <?php
-if($_GET['s']=='berhasil'){
-    echo "<script>alert('Data berhasil disimpan!');</script>";
-}elseif($_GET['s']=='gagal'){
-    echo "<script>alert('Data gagal disimpan!');</script>";
+if(isset($_GET['s'])){
+    if($_GET['s']=='berhasil'){
+        echo "<script>alert('Data berhasil disimpan!');</script>";
+    }elseif($_GET['s']=='gagal'){
+        echo "<script>alert('Data gagal disimpan!');</script>";
+    }
 }
+
 ?>
 
 

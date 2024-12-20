@@ -9,10 +9,10 @@ if(isset($_POST['nama'])){
 
     $simpan = $koneksi->query("INSERT INTO table_user (nama,nomor_hp,email,password,created_at) VALUES ('$nama','$telpon','$email','$password','$created_at')");
     if($simpan){
-        header("location:user.php?s=berhasil");
+        header("location:data_user.php?s=berhasil");
     }else{
         //view error
-        
+
         header("location:user.php?s=gagal");
     }
 }else{
